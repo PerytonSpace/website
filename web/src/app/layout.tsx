@@ -7,6 +7,8 @@ import { site } from "@/lib/site";
 import "@/styles/scrape.css";
 import "./globals.css";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://peryton.space";
+
 /** Interim brand face — self-hosted via next/font (no Google runtime CSS). */
 const spaceMono = Space_Mono({
   weight: ["400", "700"],
@@ -16,6 +18,7 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: site.name,
     template: `%s — ${site.name}`,

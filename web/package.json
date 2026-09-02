@@ -8,7 +8,7 @@
     "generate-seo": "node scripts/generate-seo.mjs",
     "prebuild": "npm run prepare-content && npm run sync-media && npm run generate-seo",
     "dev": "npm run prepare-content && npm run sync-media && next dev",
-    "build": "npm run prebuild && next build",
+    "build": "npm run prebuild && next build && node scripts/prefix-static-assets.mjs",
     "start": "npx serve out",
     "deploy:cf": "npm run build && npx wrangler pages deploy out --project-name=peryton-space",
     "lint": "eslint"

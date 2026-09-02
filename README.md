@@ -16,7 +16,7 @@ Open http://localhost:3000
 
 ## Deploy
 
-GitHub Actions builds `web/` and publishes `web/out` to GitHub Pages on push to `main`.
+GitHub Actions builds `web/` and publishes `web/out` to GitHub Pages on push to `main`: [https://perytonspace.github.io/website/](https://perytonspace.github.io/website/).
 
 Cloudflare Pages (production domain `peryton.space`) is documented in `.planning/docs/HOSTING.md`.
 

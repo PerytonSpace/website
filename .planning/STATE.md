@@ -11,7 +11,7 @@ See: .planning/PROJECT.md (updated 2026-08-08)
 
 Phase: 5 of 5 (Host & handover)  
 Status: Engineering shipped; **2026-08-29 full-page visual audit** walked every user-reachable route  
-Last activity: 2026-08-29 — Society site lives in org repo PerytonSpace/website (github.io left as projects site)
+Last activity: 2026-09-02 — Deploy society site to https://perytonspace.github.io/website/ (org projects site untouched)
 
 Progress: Known scrape fold-in done · remaining years still Severin · a few chrome defects vs COMP-05 / public copy · deploy/cutover human-gated
 
@@ -44,7 +44,7 @@ Progress: Known scrape fold-in done · remaining years still Severin · a few ch
 - **Footer:** `.ps-footer` new chrome (not WP footer classes)
 - **Public media:** Curated copy via `npm run sync-media` (not full `wp-content` symlink); archive remains at repo `wp-content/`
 - **SEO:** `public/robots.txt`, `sitemap.xml`, Cloudflare `_headers` generated on build
-- **Units:** Landscape ≥720p (1280×720+) — logo/grid/intro proportions in `em`; hairlines stay `px`
+- **Units:** Landscape ≥720p (1280×720+) — logo/grid/intro proportions in `em`; hairlines stay `px`. Cards (`--ps-card-*`) size from `vw`/`svh`/`dvh` so they track the screen.
 - **Awards / video:** `site/awards.json`, `site/media.json` (hero cues; mobile landscape=`contain` / portrait=`cover`; orientation flips pause→DOM fit→paint→play at marked frames)
 - **Missions:** `missions/index.json` drives hubs, years, nav year children
 - **Content layout:** `scrape/` · `site/` · `missions/` · `team/{index,rosters}` · `pages/{committee,team,stagworks,rosters,…}`
@@ -53,7 +53,7 @@ Progress: Known scrape fold-in done · remaining years still Severin · a few ch
 - **NRC early years:** Legacy `/nrc-2/` “For 2021” / “For 2022” → `/nationalrocketry/2021-2022/` and `/nationalrocketry/2022-2023/` (`published`); `/nrc-2/` aliases hub.
 - **Mach-23:** Legacy `/competitions/` write-up → `/mach/2022-2023/`; `/competitions/` aliases that year page; draft media/tech as year `extraSections`.
 - **Mach-24 / NRC 2023–24 / Race2Space / IOSM:** Folded from WP `draft-*` pages in master.md scrape; draft URLs alias to structured years/hubs. Mission years may carry `extraSections` (same section types as hubs).
-- **Host:** Cloudflare Pages chosen + documented; prod deploy awaits credentials
+- **Host:** Cloudflare Pages still the `peryton.space` target; GitHub Pages staging is https://perytonspace.github.io/website/ (`basePath=/website`). Org `github.io` stays the Jekyll projects site.
 - **2026-08-29 committee:** 2025–2026 (Matt Pres) moved to historical; current is 2026–2027 from org chart (Carys Pres, Miruna VP, Sev Tres, Caitlin VP Launch, Jim VP Mission, Anya HoO, Vihanya Social)
 - **2026-08-29 card covers:** Competition snap / awards / year cards use matching people/hardware photos (`coverImage` / `activityCovers`); Race2Space, IOSM, Launch4Change, and unmatched years stay plain — no mismatched shots
 
@@ -75,7 +75,7 @@ Progress: Known scrape fold-in done · remaining years still Severin · a few ch
 - [x] **Hub badges:** `buildMissionHubPage` hardcodes `status: "placeholder"`, so NRC/SDC/Mach hubs with real intros still show “Placeholder — copy TBD”.
 - [x] **Drawer:** “Header prototype: drawer · flip `headerPrototype` in `site.ts`” is visible to every visitor. Keep the prototype switch; hide the code note until committee picks.
 - [x] **Current committee URL:** live slug is still WP leftover `/committee-2023-2024-copy/` (title is 2025–2026).
-- [x] **Repo:** rebuild lives in [PerytonSpace/website](https://github.com/PerytonSpace/website) (WP scrape HTML + full `wp-content` archive gitignored). Org `github.io` stays the Jekyll projects site.
+- [x] **Repo:** rebuild lives in [PerytonSpace/website](https://github.com/PerytonSpace/website) (public so GitHub Pages works on the free org plan). Org `github.io` stays the Jekyll projects site.
 
 **Human-gated (visually confirmed still open):**
 
@@ -106,7 +106,7 @@ Cutover still blocked on chase + CF credentials. Chrome hygiene from the visual 
 
 ## Session Continuity
 
-Last session: 2026-08-29  
-Stopped at: Agent chrome hygiene shipped and verified locally  
+Last session: 2026-08-30  
+Stopped at: Drawer year-flyout “Coming soon” hover aligned (tip below year, not clipped)  
 Resume file: None  
 Next action: Humans still own PREDEPLOY_CHASE + CF/`peryton.space` cutover; surnames for Miruna/Anya/Vihanya if they want full names on cards

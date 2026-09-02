@@ -11,7 +11,9 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const WEB = path.resolve(__dirname, "..");
 const PUBLIC = path.join(WEB, "public");
-const SITE = "https://peryton.space";
+const SITE = (
+  process.env.NEXT_PUBLIC_SITE_URL || "https://peryton.space"
+).replace(/\/$/, "");
 
 function collectRoutes() {
   const routes = new Set(["/"]);

@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { cardCoverClass, cardCoverStyle } from "@/lib/cardCover";
+import { withBase, withBaseHtml } from "@/lib/basePath";
+import { cardCoverClass, cardCoverVars } from "@/lib/cardCover";
 import { yearHref, yearIsNavigable } from "@/lib/missions";
 import {
   resolveMissionYears,
@@ -18,7 +19,7 @@ function PersonCard({ person }: { person: TeamPerson }) {
       {person.photo ? (
         <img
           className="ps-person-photo"
-          src={person.photo}
+          src={withBase(person.photo)}
           alt=""
           width={160}
           height={160}
@@ -69,7 +70,9 @@ function Section({ section }: { section: StructuredSection }) {
       return (
         <div
           className="ps-prose"
-          dangerouslySetInnerHTML={{ __html: String(props.html ?? "") }}
+          dangerouslySetInnerHTML={{
+            __html: withBaseHtml(String(props.html ?? "")),
+          }}
         />
       );
     case "placeholder":
@@ -147,7 +150,7 @@ function Section({ section }: { section: StructuredSection }) {
             const navigable = yearIsNavigable(year);
             const cover = year.coverImage ?? mission.coverImage;
             const coverClass = cardCoverClass(cover);
-            const coverStyle = cardCoverStyle(cover);
+            const coverStyle = cardCoverVars(cover);
             return (
               <li key={year.id} className="ps-mission-year">
                 {navigable ? (
@@ -171,7 +174,9 @@ function Section({ section }: { section: StructuredSection }) {
                     style={coverStyle}
                   >
                     <span className="ps-mission-year-label">{year.label}</span>
-                    <span className="ps-mission-year-summary">Coming soon</span>
+                    <span className="ps-mission-year-summary ps-mission-year-summary--status">
+                      Coming soon
+                    </span>
                   </span>
                 )}
               </li>

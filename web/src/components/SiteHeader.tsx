@@ -31,8 +31,8 @@ function NavLeaf({
     return (
       <span
         className={`${className} ps-nav-link--soon`}
-        title="Coming soon"
         aria-disabled="true"
+        aria-label={`${item.label} (Coming soon)`}
       >
         {item.label}
         <span className="ps-nav-soon-tip" aria-hidden="true">

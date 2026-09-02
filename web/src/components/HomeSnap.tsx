@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import awards from "../../content/site/awards.json";
 import siteMedia from "../../content/site/media.json";
+import { withBase } from "@/lib/basePath";
 import { cardCoverClass, cardCoverStyle } from "@/lib/cardCover";
 import {
   hasHomeBrandIntroPlayed,
@@ -60,7 +61,7 @@ function ActivityLink({
     return (
       <span
         className={`${className} ps-snap-card-link--soon`}
-        title="Coming soon"
+        aria-label={`${item.label} (Coming soon)`}
       >
         {item.label}
         <span className="ps-nav-soon-tip" aria-hidden="true">
@@ -126,7 +127,7 @@ export function HomeSnap() {
   );
   const switchingRef = useRef(false);
   const introDoneRef = useRef(hasHomeBrandIntroPlayed());
-  const videoSrc = getHeroVideo();
+  const videoSrc = withBase(getHeroVideo());
   const initialCue = annotationAtTime(VIDEO_ANNOTATIONS, 0);
   const [videoCue, setVideoCue] = useState(initialCue?.label ?? "");
   const [clipOrientation, setClipOrientation] = useState<ClipOrientation>(

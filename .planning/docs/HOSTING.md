@@ -2,7 +2,7 @@
 
 **Status:** Chosen + documented + local static smoke-tested  
 **Date:** 2026-08-08  
-**Production deploy:** Awaits Cloudflare account / API token (human). Source of truth for the rebuild is [`PerytonSpace/website`](https://github.com/PerytonSpace/website) (GitHub Pages on push to `main`). The org `github.io` repo remains the Jekyll projects site.
+**Production deploy:** Awaits Cloudflare account / API token (human). Source of truth for the rebuild is [`PerytonSpace/website`](https://github.com/PerytonSpace/website). GitHub Pages preview: [https://perytonspace.github.io/website/](https://perytonspace.github.io/website/) (project site; `NEXT_PUBLIC_BASE_PATH=/website`). The org [`PerytonSpace.github.io`](https://github.com/PerytonSpace/PerytonSpace.github.io) repo remains the Jekyll projects site at [projects.peryton.space](https://projects.peryton.space).
 
 ## Choice
 
@@ -61,7 +61,7 @@ Repo: [PerytonSpace/website](https://github.com/PerytonSpace/website). Workflow 
 
 ## Not done until human step
 
-- [x] First GitHub Pages deploy path: `PerytonSpace/website` (Actions → `web/out`)
+- [x] First GitHub Pages deploy path: `PerytonSpace/website` → https://perytonspace.github.io/website/
 - [ ] Cloudflare account access confirmed
 - [ ] First Cloudflare production deploy URL recorded here
 - [ ] Custom domain attached (see CUTOVER.md)
