@@ -11,7 +11,7 @@ See: .planning/PROJECT.md (updated 2026-08-08)
 
 Phase: 5 of 5 (Host & handover)  
 Status: Engineering shipped; **2026-08-29 full-page visual audit** walked every user-reachable route  
-Last activity: 2026-09-24 — Add canonical/social metadata, structured data, and canonical-only sitemap/static paths
+Last activity: 2026-09-24 — Add canonical/social metadata, structured data, canonical-only sitemap, and brand favicon
 
 Progress: Known scrape fold-in done · remaining years still Severin · a few chrome defects vs COMP-05 / public copy · deploy/cutover human-gated
 
