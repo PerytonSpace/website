@@ -4,6 +4,12 @@ import { EthosSection } from "@/components/EthosSection";
 import { PageContent } from "@/components/PageContent";
 import { StructuredPageView } from "@/components/StructuredPage";
 import { getStaticPaths, resolvePage } from "@/lib/content";
+import {
+  buildPageMetadata,
+  getStructuredDescription,
+  shouldIndexStructuredPage,
+} from "@/lib/seo";
+import { site } from "@/lib/site";
 
 type Props = {
   params: Promise<{ slug: string[] }>;
@@ -18,12 +24,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const resolved = resolvePage(slug.join("/"));
   if (!resolved) return {};
   if (resolved.kind === "structured") {
-    return { title: resolved.page.title };
+    return buildPageMetadata({
+      title: resolved.page.title,
+      description: getStructuredDescription(resolved.page),
+      pathname: resolved.page.slug,
+      index: shouldIndexStructuredPage(resolved.page),
+    });
   }
   const title = resolved.page.title
     .replace(/ — Peryton Space$/, "")
     .replace(/ – Peryton Space$/, "");
-  return { title };
+  return buildPageMetadata({
+    title,
+    description: site.tagline,
+    pathname: resolved.page.path,
+  });
 }
 
 export default async function SlugPage({ params }: Props) {
