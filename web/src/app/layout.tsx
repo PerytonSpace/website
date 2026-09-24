@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     template: `%s — ${site.name}`,
   },
   icons: {
-    icon: [{ url: site.icon, type: "image/png" }],
-    apple: site.icon,
+    icon: [{ url: site.logo, type: "image/png" }],
+    apple: site.logo,
   },
 };
 
