@@ -60,7 +60,6 @@ function collectRefs() {
   // Always keep hero + site chrome
   refs.add(HERO_VIDEO);
   refs.add("/wp-content/uploads/2024/01/transparentlogo.png");
-  refs.add("/wp-content/uploads/2023/08/cropped-pertyon-wide-1.png");
   return refs;
 }
 

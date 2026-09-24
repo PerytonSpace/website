@@ -5,13 +5,13 @@
 See: .planning/PROJECT.md (updated 2026-08-08)
 
 **Core value:** Find identity, missions by year, resources/contact, and sponsor value without WordPress friction.  
-**Current focus:** Human gates (chase + CF deploy). 2026-09-02 UI audit engineering fixes landed.
+**Current focus:** Human gates (chase + CF deploy). P0/P1 technical SEO fixes are implemented; 2026-09-02 UI audit engineering fixes landed.
 
 ## Current Position
 
 Phase: 5 of 5 (Host & handover)  
-Status: Engineering shipped; **2026-09-02 UI audit fixes** hid public authoring leaks and COMP-05 award/flyout defects  
-Last activity: 2026-09-10 — Restored Pages custom domain `projects.peryton.space` onto the society rebuild. Human: names, ethos sign-off, write-ups, CF deploy.
+Status: Engineering shipped; **2026-09-02 UI audit fixes** hid public authoring leaks and COMP-05 award/flyout defects; **2026-08-29 full-page visual audit** walked every user-reachable route  
+Last activity: 2026-09-24 — Add canonical/social metadata, structured data, canonical-only sitemap, and brand favicon. Prior: 2026-09-10 restored Pages custom domain `projects.peryton.space`. Human: names, ethos sign-off, write-ups, CF deploy.
 
 Progress: Known scrape fold-in done · remaining years still Severin · a few chrome defects vs COMP-05 / public copy · deploy/cutover human-gated
 

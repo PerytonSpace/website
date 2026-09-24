@@ -6,6 +6,8 @@ export const site = {
   name: "Peryton Space",
   tagline: "The University of Surrey's UKSEDS Branch and Space Society",
   logo: "/wp-content/uploads/2024/01/transparentlogo.png",
+  /** Tab / Apple touch mark — white triangle in a black circle. */
+  icon: "/brand/peryton-space-icon.png",
   /** Prefer `content/site/media.json` — this is the fallback default. */
   heroVideo: siteMedia.heroVideo,
 } as const;
@@ -162,7 +164,7 @@ export const socialLinks = [
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/company/peryton-space/mycompany/",
+    href: "https://www.linkedin.com/company/peryton-space/",
     icon: "linkedin",
   },
   {

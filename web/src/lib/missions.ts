@@ -167,7 +167,7 @@ export function buildMissionYearPage(
     return {
       slug: `${mission.hubSlug}/${year.id}`,
       title: `${mission.title} ${year.label}`,
-      status: "published",
+      status: "placeholder",
       sections: [
         {
           type: "heading",

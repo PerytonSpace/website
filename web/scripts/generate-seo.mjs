@@ -11,56 +11,56 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const WEB = path.resolve(__dirname, "..");
 const PUBLIC = path.join(WEB, "public");
-const SITE = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://peryton.space"
-).replace(/\/$/, "");
+const configuredSiteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://peryton.space";
+const parsedSiteUrl = new URL(configuredSiteUrl);
+if (parsedSiteUrl.hostname === "www.peryton.space") {
+  parsedSiteUrl.hostname = "peryton.space";
+}
+const SITE = parsedSiteUrl.toString().replace(/\/$/, "");
+const SITEMAP_EXCLUDE = new Set(["merch"]);
 
 function collectRoutes() {
   const routes = new Set(["/"]);
-  const scrapePath = path.join(WEB, "content", "scrape", "pages.json");
-  if (fs.existsSync(scrapePath)) {
-    const data = JSON.parse(fs.readFileSync(scrapePath, "utf8"));
-    for (const p of data.pages || []) {
-      const route = p.path ? `/${p.path}/` : "/";
-      routes.add(route);
-    }
-  }
-  // Structured shells / missions — walk content JSON for slug fields
-  const contentRoot = path.join(WEB, "content");
+
+  // Canonical structured pages only. Scraped WordPress paths include aliases,
+  // draft URLs, and thin legacy placeholders, so they are intentionally absent.
+  const pagesRoot = path.join(WEB, "content", "pages");
   function walk(dir) {
     for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {
       const p = path.join(dir, ent.name);
       if (ent.isDirectory()) {
-        if (ent.name === "scrape") continue;
         walk(p);
       } else if (ent.name.endsWith(".json")) {
-        try {
-          const j = JSON.parse(fs.readFileSync(p, "utf8"));
-          if (j && typeof j.slug === "string" && j.slug) {
-            routes.add(`/${j.slug.replace(/^\/|\/$/g, "")}/`);
-          }
-          if (Array.isArray(j.missions)) {
-            for (const m of j.missions) {
-              if (m.hubSlug) routes.add(`/${m.hubSlug}/`);
-              for (const y of m.years || []) {
-                if (
-                  y.id &&
-                  (y.status === "published" || y.status === "live")
-                ) {
-                  routes.add(`/${m.hubSlug}/${y.id}/`);
-                }
-              }
-            }
-          }
-        } catch {
-          /* ignore */
+        const page = JSON.parse(fs.readFileSync(p, "utf8"));
+        const isIndexable =
+          (page.status === "published" || page.slug === "member-zone") &&
+          !SITEMAP_EXCLUDE.has(page.slug);
+        if (
+          isIndexable &&
+          typeof page.slug === "string" &&
+          page.slug &&
+          !page.slug.startsWith("draft-")
+        ) {
+          routes.add(`/${page.slug.replace(/^\/|\/$/g, "")}/`);
         }
       }
     }
   }
-  walk(contentRoot);
-  const SITE_SKIP = new Set(["/committee-2023-2024-copy/"]);
-  return [...routes].filter((r) => !SITE_SKIP.has(r)).sort((a, b) => a.localeCompare(b));
+  walk(pagesRoot);
+
+  const missionsPath = path.join(WEB, "content", "missions", "index.json");
+  const missions = JSON.parse(fs.readFileSync(missionsPath, "utf8")).missions;
+  for (const mission of missions) {
+    routes.add(`/${mission.hubSlug}/`);
+    for (const year of mission.years || []) {
+      if (year.status === "published" || year.status === "live") {
+        routes.add(`/${mission.hubSlug}/${year.id}/`);
+      }
+    }
+  }
+
+  return [...routes].sort((a, b) => a.localeCompare(b));
 }
 
 function main() {

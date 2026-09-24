@@ -2,12 +2,11 @@ import type { Metadata } from "next";
 import { Space_Mono } from "next/font/google";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
-import { site } from "@/lib/site";
+import { buildPageMetadata, siteUrl } from "@/lib/seo";
+import { site, socialLinks } from "@/lib/site";
 /* Scrape WP blocks first; globals (tokens + new chrome) always wins after. */
 import "@/styles/scrape.css";
 import "./globals.css";
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://peryton.space";
 
 /** Interim brand face — self-hosted via next/font (no Google runtime CSS). */
 const spaceMono = Space_Mono({
@@ -17,16 +16,45 @@ const spaceMono = Space_Mono({
   display: "swap",
 });
 
+const rootMetadata = buildPageMetadata({
+  title: site.name,
+  description: site.tagline,
+  pathname: "/",
+});
+
 export const metadata: Metadata = {
+  ...rootMetadata,
   metadataBase: new URL(siteUrl),
   title: {
     default: site.name,
     template: `%s — ${site.name}`,
   },
-  description: site.tagline,
   icons: {
-    icon: "/wp-content/uploads/2023/08/cropped-pertyon-wide-1.png",
+    icon: [{ url: site.icon, type: "image/png" }],
+    apple: site.icon,
   },
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: site.name,
+      url: `${siteUrl}/`,
+      logo: new URL(site.logo, `${siteUrl}/`).toString(),
+      sameAs: socialLinks.map((link) => link.href),
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      name: site.name,
+      url: `${siteUrl}/`,
+      description: site.tagline,
+      publisher: { "@id": `${siteUrl}/#organization` },
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -37,6 +65,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={spaceMono.variable}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <div className="wp-site-blocks">
           <a className="ps-skip-link" href="#wp--skip-link--target">
             Skip to content

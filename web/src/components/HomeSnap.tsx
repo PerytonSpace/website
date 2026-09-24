@@ -25,7 +25,6 @@ import { hasSponsorsContent, getSponsors } from "@/lib/sponsors";
 import {
   getActivityNavGroups,
   isYearNavChildren,
-  site,
   type NavLink,
 } from "@/lib/site";
 
@@ -466,7 +465,7 @@ export function HomeSnap() {
         />
         <div className="ps-snap-video-shade" aria-hidden />
         <div className="ps-snap-wordmark">
-          <h1 className="ps-snap-wordmark-title">{site.name}</h1>
+          <h1 className="ps-snap-wordmark-title">Peryton Space</h1>
           <p className="ps-snap-wordmark-sub">
             university of surrey UKSEDS branch
           </p>

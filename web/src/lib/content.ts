@@ -4,9 +4,6 @@ import {
   getStructuredStaticPaths,
 } from "@/lib/structured";
 
-/** Leftover WP widgets / empty stubs — 404 even if scrape still has HTML. */
-const BLOCKED_SCRAPE_PATHS = new Set(["777878-2"]);
-
 export type Page = {
   slug: string;
   path: string;
@@ -35,38 +32,13 @@ export function resolvePage(routePath: string) {
   const normalized = routePath.replace(/^\/|\/$/g, "");
   const structured = getStructuredPage(normalized);
   if (structured) return { kind: "structured" as const, page: structured };
-  if (BLOCKED_SCRAPE_PATHS.has(normalized)) return null;
   const scraped = getPageByPath(normalized);
   if (scraped) return { kind: "scraped" as const, page: scraped };
   return null;
 }
 
 export function getStaticPaths(): { slug: string[] }[] {
-  const scraped = data.pages
-    .filter((p) => p.path !== "" && !BLOCKED_SCRAPE_PATHS.has(p.path))
-    .map((p) => ({ slug: p.path.split("/") }));
-
-  const structured = getStructuredStaticPaths();
-  const seen = new Set(scraped.map((s) => s.slug.join("/")));
-
-  for (const s of structured) {
-    const key = s.slug.join("/");
-    if (!seen.has(key)) {
-      scraped.push(s);
-      seen.add(key);
-    }
-  }
-
-  // Structured overrides: ensure paths exist even if scrape had same path
-  for (const s of structured) {
-    const key = s.slug.join("/");
-    if (!seen.has(key)) {
-      scraped.push(s);
-      seen.add(key);
-    }
-  }
-
-  return scraped;
+  return getStructuredStaticPaths();
 }
 
 export function getHomePage(): Page {

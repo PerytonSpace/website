@@ -28,11 +28,7 @@ export function getStructuredPage(routePath: string): StructuredPage | undefined
 }
 
 export function getStructuredStaticPaths(): { slug: string[] }[] {
-  const pages = structuredPages.map((p) => ({ slug: p.slug.split("/") }));
-  for (const alias of Object.keys(STRUCTURED_ALIASES)) {
-    pages.push({ slug: alias.split("/") });
-  }
-  return pages;
+  return structuredPages.map((p) => ({ slug: p.slug.split("/") }));
 }
 
 export function getAllStructuredPaths(): string[] {
