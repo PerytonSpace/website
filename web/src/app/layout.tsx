@@ -30,7 +30,8 @@ export const metadata: Metadata = {
     template: `%s — ${site.name}`,
   },
   icons: {
-    icon: "/wp-content/uploads/2023/08/cropped-pertyon-wide-1.png",
+    icon: [{ url: site.icon, type: "image/png" }],
+    apple: site.icon,
   },
 };
 
