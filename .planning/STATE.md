@@ -11,7 +11,7 @@ See: .planning/PROJECT.md (updated 2026-08-08)
 
 Phase: 5 of 5 (Host & handover)  
 Status: Engineering shipped; **2026-09-02 UI audit fixes** hid public authoring leaks and COMP-05 award/flyout defects; **2026-08-29 full-page visual audit** walked every user-reachable route  
-Last activity: 2026-09-24 — Add canonical/social metadata, structured data, canonical-only sitemap, and brand favicon. Prior: 2026-09-10 restored Pages custom domain `projects.peryton.space`. Human: names, ethos sign-off, write-ups, CF deploy.
+Last activity: 2026-09-24 — Add canonical/social metadata, structured data, canonical-only sitemap, and point the favicon at the header logo. Prior: 2026-09-10 restored Pages custom domain `projects.peryton.space`. Human: names, ethos sign-off, write-ups, CF deploy.
 
 Progress: Known scrape fold-in done · remaining years still Severin · a few chrome defects vs COMP-05 / public copy · deploy/cutover human-gated
 
@@ -44,6 +44,7 @@ Progress: Known scrape fold-in done · remaining years still Severin · a few ch
 - **Footer:** `.ps-footer` new chrome (not WP footer classes)
 - **Public media:** Curated copy via `npm run sync-media` (not full `wp-content` symlink); archive remains at repo `wp-content/`
 - **SEO:** `public/robots.txt`, `sitemap.xml`, Cloudflare `_headers` generated on build
+- **Brand marks:** Tab icon, Apple touch icon, and OG image all use `site.logo` (the header logo); `src/app/favicon.ico` is rebuilt from it with `python3 scripts/make-favicon.py`
 - **Units:** Landscape ≥720p (1280×720+) — logo/grid/intro proportions in `em`; hairlines stay `px`. Cards (`--ps-card-*`) size from `vw`/`svh`/`dvh` so they track the screen.
 - **Awards / video:** `site/awards.json`, `site/media.json` (hero cues; mobile landscape=`contain` / portrait=`cover`; orientation flips pause→DOM fit→paint→play at marked frames)
 - **Missions:** `content.json` `missions[]` drives hubs, years, nav year children; 2+ photos in extraSection figures become a `gallery` carousel
