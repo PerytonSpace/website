@@ -38,31 +38,7 @@ export function resolvePage(routePath: string) {
 }
 
 export function getStaticPaths(): { slug: string[] }[] {
-  const scraped = data.pages
-    .filter((p) => p.path !== "")
-    .map((p) => ({ slug: p.path.split("/") }));
-
-  const structured = getStructuredStaticPaths();
-  const seen = new Set(scraped.map((s) => s.slug.join("/")));
-
-  for (const s of structured) {
-    const key = s.slug.join("/");
-    if (!seen.has(key)) {
-      scraped.push(s);
-      seen.add(key);
-    }
-  }
-
-  // Structured overrides: ensure paths exist even if scrape had same path
-  for (const s of structured) {
-    const key = s.slug.join("/");
-    if (!seen.has(key)) {
-      scraped.push(s);
-      seen.add(key);
-    }
-  }
-
-  return scraped;
+  return getStructuredStaticPaths();
 }
 
 export function getHomePage(): Page {

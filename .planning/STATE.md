@@ -5,13 +5,13 @@
 See: .planning/PROJECT.md (updated 2026-08-08)
 
 **Core value:** Find identity, missions by year, resources/contact, and sponsor value without WordPress friction.  
-**Current focus:** Human gates (chase + CF deploy). Chrome hygiene from 2026-08-29 audit is done.
+**Current focus:** Human gates (chase + CF deploy). P0/P1 technical SEO fixes are implemented.
 
 ## Current Position
 
 Phase: 5 of 5 (Host & handover)  
 Status: Engineering shipped; **2026-08-29 full-page visual audit** walked every user-reachable route  
-Last activity: 2026-09-02 — Deploy society site to https://perytonspace.github.io/website/ (org projects site untouched)
+Last activity: 2026-09-24 — Add canonical/social metadata, structured data, and canonical-only sitemap/static paths
 
 Progress: Known scrape fold-in done · remaining years still Severin · a few chrome defects vs COMP-05 / public copy · deploy/cutover human-gated
 

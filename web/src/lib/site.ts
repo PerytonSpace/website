@@ -162,7 +162,7 @@ export const socialLinks = [
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/company/peryton-space/mycompany/",
+    href: "https://www.linkedin.com/company/peryton-space/",
     icon: "linkedin",
   },
   {
