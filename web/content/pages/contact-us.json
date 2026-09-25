@@ -20,7 +20,7 @@
       "type": "embedForm",
       "props": {
         "formEmbedUrl": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=kyaQa3QQqkCeIdiURqLrtU13fMDWn1lKk9I-knvOQF1UMkg2QU9OUjBCMkZJWVQyRlgzMVZOSVpJMy4u&embed=true",
-        "fallbackNote": "Contact form embed URL missing. Set <code>formEmbedUrl</code> in <code>web/content/pages/contact-us.json</code>, or use society social channels."
+        "fallbackNote": "The contact form is unavailable right now. Please reach us through the society’s social channels."
       }
     }
   ]

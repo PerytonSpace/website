@@ -237,7 +237,7 @@ function Section({ section }: { section: StructuredSection }) {
             dangerouslySetInnerHTML={{
               __html: String(
                 props.fallbackNote ??
-                  "Contact form embed URL not configured yet.",
+                  "The contact form is unavailable right now. Please reach us through the society’s social channels.",
               ),
             }}
           />
@@ -253,9 +253,6 @@ export function StructuredPageView({ page }: { page: StructuredPageData }) {
   return (
     <main className="ps-structured" id="wp--skip-link--target">
       <div className="ps-structured-inner">
-        {page.status === "placeholder" ? (
-          <p className="ps-status-pill">Placeholder — copy TBD</p>
-        ) : null}
         {page.sections.map((section, i) => (
           <Section key={section.id ?? `${section.type}-${i}`} section={section} />
         ))}

@@ -26,7 +26,7 @@
     {
       "type": "richtext",
       "props": {
-        "html": "<figure class=\"ps-figure\"><img src=\"/wp-content/uploads/2024/08/t-shirt.a.front_-1.png\" alt=\"Peryton Space merch\" loading=\"lazy\" /></figure><p>Society merchandise — ask via Contact for current stock and ordering (legacy WordPress merch form retired).</p>"
+        "html": "<figure class=\"ps-figure\"><img src=\"/wp-content/uploads/2024/08/t-shirt.a.front_-1.png\" alt=\"Peryton Space merch\" loading=\"lazy\" /></figure><p>Society merchandise — ask via Contact for current stock and ordering.</p>"
       }
     },
     {
@@ -39,7 +39,7 @@
     {
       "type": "richtext",
       "props": {
-        "html": "<figure class=\"ps-figure\"><img src=\"/wp-content/uploads/2024/08/perytonspace.png\" alt=\"\" loading=\"lazy\" /></figure><p>Help keep the site accurate and useful — content edits happen in Git JSON; design feedback welcome through Contact.</p>"
+        "html": "<figure class=\"ps-figure\"><img src=\"/wp-content/uploads/2024/08/perytonspace.png\" alt=\"\" loading=\"lazy\" /></figure><p>Help keep the site accurate and useful — send corrections and design feedback through Contact.</p>"
       }
     },
     {

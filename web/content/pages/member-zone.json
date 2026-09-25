@@ -1,7 +1,7 @@
 {
   "slug": "member-zone",
   "title": "Member Zone",
-  "status": "placeholder",
+  "status": "published",
   "sections": [
     {
       "type": "heading",
@@ -24,10 +24,9 @@
       }
     },
     {
-      "type": "placeholder",
+      "type": "richtext",
       "props": {
-        "title": "How we make and order things",
-        "body": "Process notes for workshops, materials, and ordering — copy TBD (Severin / ops)."
+        "html": "<p>Workshop, materials, and ordering notes are shared with members and peer societies through society channels.</p>"
       }
     },
     {
@@ -40,21 +39,7 @@
     {
       "type": "richtext",
       "props": {
-        "html": "<p>Course information lives here (not under StagWorks), so people looking for training resources land in one place.</p>"
-      }
-    },
-    {
-      "type": "placeholder",
-      "props": {
-        "title": "Composites course",
-        "body": "Outline, who it’s for, and how to join — content TBD."
-      }
-    },
-    {
-      "type": "placeholder",
-      "props": {
-        "title": "Electronics course",
-        "body": "Outline, who it’s for, and how to join — content TBD."
+        "html": "<p>Composites and electronics courses are run for members and peer societies. Outlines and how to join are shared through society channels.</p>"
       }
     },
     {

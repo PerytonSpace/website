@@ -142,24 +142,33 @@ export function buildMissionYearPage(
   };
 
   if (!yearIsNavigable(year)) {
+    const sections: StructuredSection[] = [
+      {
+        type: "heading",
+        props: { text: `${mission.title} — ${year.label}`, level: 1 },
+      },
+    ];
+    if (year.awards.length) {
+      sections.push({
+        type: "richtext",
+        props: {
+          html: `<p><strong>Awards:</strong> ${year.awards.join("; ")}</p>`,
+        },
+      });
+    } else {
+      sections.push({
+        type: "placeholder",
+        props: {
+          title: "Coming soon",
+        },
+      });
+    }
+    sections.push(back);
     return {
       slug: `${mission.hubSlug}/${year.id}`,
       title: `${mission.title} ${year.label}`,
       status: "placeholder",
-      sections: [
-        {
-          type: "heading",
-          props: { text: `${mission.title} — ${year.label}`, level: 1 },
-        },
-        {
-          type: "placeholder",
-          props: {
-            title: "Coming soon",
-            body: "This year’s write-up isn’t published yet.",
-          },
-        },
-        back,
-      ],
+      sections,
     };
   }
 

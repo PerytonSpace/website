@@ -1,4 +1,3 @@
-/** Placeholder ethos block for About — final copy chased before deploy. */
 export function EthosSection() {
   return (
     <section
@@ -11,8 +10,7 @@ export function EthosSection() {
       </h2>
       <p className="ps-ethos-body">
         Our ethos describes how Peryton Space works together — curiosity,
-        craftsmanship, and looking after each other while we build. Full wording
-        to be confirmed with the committee before launch.
+        craftsmanship, and looking after each other while we build.
       </p>
     </section>
   );

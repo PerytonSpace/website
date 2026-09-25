@@ -3,24 +3,15 @@
     {
       "name": "Chris",
       "role": "Academic Supervisor",
-      "linkedin": null,
-      "note": "Full name/title to be confirmed before deploy."
+      "linkedin": null
     },
     {
       "name": "Andrew",
       "role": "Academic Supervisor",
-      "linkedin": null,
-      "note": "Listing assumed OK pending reply; confirm before deploy."
+      "linkedin": null
     }
   ],
-  "wellbeing": [
-    {
-      "name": "Placeholder",
-      "role": "Wellbeing Champion",
-      "linkedin": null,
-      "note": "Replace with current champions before deploy. Contact details on request via society channels \u2014 not listed publicly here."
-    }
-  ],
+  "wellbeing": [],
   "historicalCommittees": [
     {
       "year": "2026-2027",
