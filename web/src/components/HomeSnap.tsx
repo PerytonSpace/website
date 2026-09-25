@@ -491,9 +491,6 @@ export function HomeSnap() {
       >
         <div className="ps-snap-inner">
           <h2 className="ps-snap-title">What we do</h2>
-          <p className="ps-snap-sub">
-            Same groups as the menu — Launch, Missions, and StagWorks.
-          </p>
           <ul className="ps-snap-cards">
             {activityGroups.map((group) => {
               const cover = activityCovers[group.label];
@@ -527,7 +524,7 @@ export function HomeSnap() {
         <div className="ps-snap-inner">
           <h2 className="ps-snap-title">{awards.title}</h2>
           <p className="ps-snap-sub">
-            Competition highlights — details grow as write-ups land.
+            Selected results from the competitions we enter.
           </p>
           <ul className="ps-awards-grid">
             {awardItems.map((item) => {
@@ -606,8 +603,8 @@ export function HomeSnap() {
           ) : (
             <>
               <p className="ps-snap-sub">
-                We’re building a partnerships programme — product support,
-                sponsorship tiers, and careers talks. Nothing public yet.
+                We work with partners on product support, sponsorship, and
+                careers talks.
               </p>
               <p className="ps-cta">
                 <Link href="/contact-us/">Talk to us about partnering</Link>
@@ -634,9 +631,8 @@ export function HomeSnap() {
                 <Link href="/member-zone/">Member Zone</Link>
               </h3>
               <p className="ps-snap-card-blurb">
-                Public workshop notes, courses (composites & electronics), and
-                how we make things. No login — email/phone on request via
-                society channels.
+                Workshop notes and courses for members and peer societies. No
+                login — email and phone on request via society channels.
               </p>
               <p className="ps-cta">
                 <Link href="/member-zone/">Open Member Zone</Link>

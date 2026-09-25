@@ -17,7 +17,7 @@
         }
       ],
       "relatedLinks": [
-        { "label": "Legacy teams page", "href": "/satellite-design-competition-teams/" },
+        { "label": "Satellite Design Competition teams", "href": "/satellite-design-competition-teams/" },
         { "label": "Team SDC 2023 (archive)", "href": "/teamsdc/" }
       ],
       "years": [
@@ -25,7 +25,7 @@
           "id": "2024-2025",
           "label": "2024–2025",
           "status": "placeholder",
-          "summary": "Most recent SDC campaign. Full write-up TBD (Severin / team).",
+          "summary": "Best Innovation at the Satellite Design Competition.",
           "highlights": [],
           "awards": ["Best Innovation"],
           "intake": "sdc-2024-2025"
@@ -34,7 +34,7 @@
           "id": "2023-2024",
           "label": "2023–2024",
           "status": "placeholder",
-          "summary": "Post-Myers competition year. Narrative and results TBD.",
+          "summary": "Satellite Design Competition, 2023–2024.",
           "highlights": [],
           "awards": [],
           "intake": "sdc-2023-2024"
@@ -164,7 +164,7 @@
           "id": "2024-2025",
           "label": "2024–2025",
           "status": "placeholder",
-          "summary": "Write-up TBD — intake: NRC (−2y backlog).",
+          "summary": "National Rocketry Championship, 2024–2025.",
           "highlights": [],
           "awards": [],
           "intake": "nrc-2024-2025"
@@ -241,7 +241,7 @@
           "label": "2024–2025",
           "status": "placeholder",
           "coverImage": "/media/covers/mach-25-lab.jpg",
-          "summary": "Write-up TBD — intake: Mach (−1y backlog).",
+          "summary": "Mach-X, 2024–2025.",
           "highlights": [],
           "awards": [],
           "intake": "mach-2024-2025"
@@ -383,7 +383,7 @@
           "id": "2024-2025",
           "label": "2024–2025",
           "status": "placeholder",
-          "summary": "Proper year write-up TBD — intake: Launch4Change section.",
+          "summary": "Launch4Change.",
           "highlights": [],
           "awards": [],
           "intake": "l4c-2024-2025"

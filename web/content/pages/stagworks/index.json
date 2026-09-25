@@ -25,7 +25,7 @@
     {
       "type": "richtext",
       "props": {
-        "html": "<p>Course resources (composites / electronics) live in the <a href=\"/member-zone/\">Member Zone</a>, not here.</p>"
+        "html": "<p>Composites and electronics courses are in the <a href=\"/member-zone/\">Member Zone</a>.</p>"
       }
     }
   ]

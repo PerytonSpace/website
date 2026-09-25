@@ -1,7 +1,7 @@
 {
   "slug": "stagworks/composites",
   "title": "StagWorks — Composite testing",
-  "status": "placeholder",
+  "status": "published",
   "sections": [
     {
       "type": "heading",
@@ -11,16 +11,15 @@
       }
     },
     {
-      "type": "placeholder",
+      "type": "richtext",
       "props": {
-        "title": "Coming into StagWorks",
-        "body": "Placeholder for mechanical/composite testing to de-risk competition work. Course info lives in the Member Zone."
+        "html": "<p>Mechanical and composite testing for competition builds. Related course notes for members are in the <a href=\"/member-zone/\">Member Zone</a>.</p>"
       }
     },
     {
       "type": "cta",
       "props": {
-        "label": "Member Zone courses",
+        "label": "Member Zone",
         "href": "/member-zone/"
       }
     }

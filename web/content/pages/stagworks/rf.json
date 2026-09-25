@@ -1,7 +1,7 @@
 {
   "slug": "stagworks/rf",
   "title": "StagWorks — RF",
-  "status": "placeholder",
+  "status": "published",
   "sections": [
     {
       "type": "heading",
@@ -11,10 +11,9 @@
       }
     },
     {
-      "type": "placeholder",
+      "type": "richtext",
       "props": {
-        "title": "Coming into StagWorks",
-        "body": "Placeholder for planned RF work outside competition budgets. Details when confirmed."
+        "html": "<p>Radio-frequency experiments outside the competition programmes.</p>"
       }
     },
     {
