@@ -83,12 +83,12 @@ Progress: Known scrape fold-in done · remaining years still Severin · a few ch
 
 - [ ] Cloudflare account → first production deploy (record URL in HOSTING.md)
 - [x] Committee: `headerPrototype` drawer vs rail — superseded 2026-09-05 (no top bar; left rail only)
-- [ ] Ethos copy (Carys / Severin) — About `#ethos` still says wording TBD before launch
+- [x] Ethos copy — dropped the “wording to be confirmed before launch” aside; the public sentence (curiosity, craftsmanship, looking after each other) remains
 - [x] `formEmbedUrl` on contact-us in `content.json` — Microsoft Forms loads (Subject / Name / Message / Email + Submit)
 - [ ] Confirm names: supervisors still “Chris” / “Andrew”; wellbeing is a literal Placeholder card; empty “University wellbeing (SU)” heading
 - [ ] Confirm surnames for Miruna / Anya / Vihanya; 2026–2027 committee is live (Carys Pres); 2025–2026 is historical
 - [ ] LinkedIn opt-ins — none shown on committee/team cards
-- [ ] Member Zone workshop + course copy (shells with TBD, as designed)
+- [x] Member Zone workshop + course copy — removed TBD shells and the StagWorks aside; finished public wording remains
 - [ ] Severin write-ups still open: NRC/Mach 2024–25, SDC 2023–25, L4C year, radiation blurb year (Phase 3 INTAKE)
 - [ ] Awards wording (home lists SDC Best Innovation 2024–2025 while that year page is still a placeholder)
 - [ ] Execute CUTOVER.md after PREDEPLOY_CHASE.md
