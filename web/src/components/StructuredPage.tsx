@@ -282,7 +282,7 @@ function Section({ section }: { section: StructuredSection }) {
             dangerouslySetInnerHTML={{
               __html: String(
                 props.fallbackNote ??
-                  "Contact form embed URL not configured yet.",
+                  "The contact form is unavailable right now. Please reach us through the society’s social channels.",
               ),
             }}
           />

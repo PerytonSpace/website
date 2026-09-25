@@ -56,7 +56,7 @@
           "type": "embedForm",
           "props": {
             "formEmbedUrl": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=kyaQa3QQqkCeIdiURqLrtU13fMDWn1lKk9I-knvOQF1UMkg2QU9OUjBCMkZJWVQyRlgzMVZOSVpJMy4u&embed=true",
-            "fallbackNote": "Contact form embed URL missing. Set <code>formEmbedUrl</code> on the contact-us page in <code>web/content/content.json</code>, or use society social channels."
+            "fallbackNote": "The contact form is unavailable right now. Please reach us through the society’s social channels."
           }
         }
       ]
@@ -87,10 +87,9 @@
           }
         },
         {
-          "type": "placeholder",
+          "type": "richtext",
           "props": {
-            "title": "How we make and order things",
-            "body": "Workshop process, materials, and ordering notes will be published here for members and peer societies."
+            "html": "<p>Workshop, materials, and ordering notes are shared with members and peer societies through society channels.</p>"
           }
         },
         {
@@ -103,21 +102,7 @@
         {
           "type": "richtext",
           "props": {
-            "html": "<p>Course information lives here (not under StagWorks), so people looking for training resources land in one place.</p>"
-          }
-        },
-        {
-          "type": "placeholder",
-          "props": {
-            "title": "Composites course",
-            "body": "Outline, who it is for, and how to join will appear here when the next course is scheduled."
-          }
-        },
-        {
-          "type": "placeholder",
-          "props": {
-            "title": "Electronics course",
-            "body": "Outline, who it is for, and how to join will appear here when the next course is scheduled."
+            "html": "<p>Composites and electronics courses are run for members and peer societies. Outlines and how to join are shared through society channels.</p>"
           }
         },
         {
@@ -144,7 +129,7 @@
         {
           "type": "richtext",
           "props": {
-            "html": "<p>Society merchandise requests no longer use the old WordPress form. See <a href=\"/opportunities/\">Opportunities</a> or get in touch via Contact.</p>"
+            "html": "<p>For current stock and ordering, see <a href=\"/opportunities/\">Opportunities</a> or get in touch via Contact.</p>"
           }
         },
         {
@@ -191,7 +176,7 @@
         {
           "type": "richtext",
           "props": {
-            "html": "<figure class=\"ps-figure\"><img src=\"/wp-content/uploads/2024/08/t-shirt.a.front_-1.png\" alt=\"Peryton Space merch\" loading=\"lazy\" /></figure><p>Society merchandise — ask via Contact for current stock and ordering (legacy WordPress merch form retired).</p>"
+            "html": "<figure class=\"ps-figure\"><img src=\"/wp-content/uploads/2024/08/t-shirt.a.front_-1.png\" alt=\"Peryton Space merch\" loading=\"lazy\" /></figure><p>Society merchandise — ask via Contact for current stock and ordering.</p>"
           }
         },
         {
@@ -204,7 +189,7 @@
         {
           "type": "richtext",
           "props": {
-            "html": "<figure class=\"ps-figure\"><img src=\"/wp-content/uploads/2024/08/perytonspace.png\" alt=\"\" loading=\"lazy\" /></figure><p>Help keep the site accurate and useful — content edits happen in Git JSON; design feedback welcome through Contact.</p>"
+            "html": "<figure class=\"ps-figure\"><img src=\"/wp-content/uploads/2024/08/perytonspace.png\" alt=\"\" loading=\"lazy\" /></figure><p>Help keep the site accurate and useful — send corrections and design feedback through Contact.</p>"
           }
         },
         {
@@ -375,7 +360,7 @@
         {
           "type": "richtext",
           "props": {
-            "html": "<p>Faculty contacts for the society.</p>"
+            "html": "<p>Faculty who support the society.</p>"
           }
         },
         {
@@ -405,10 +390,9 @@
           }
         },
         {
-          "type": "placeholder",
+          "type": "richtext",
           "props": {
-            "title": "Champions for this year",
-            "body": "Names will be listed here once the current champions have confirmed. In the meantime, ask via society channels or the SU wellbeing service."
+            "html": "<p>Current wellbeing champions can be reached through society channels. Personal contact details are not published here — University and SU wellbeing resources are also available.</p>"
           }
         },
         {
@@ -448,7 +432,7 @@
         {
           "type": "richtext",
           "props": {
-            "html": "<p>Course resources (composites / electronics) live in the <a href=\"/member-zone/\">Member Zone</a>, not here.</p>"
+            "html": "<p>Composites and electronics courses are in the <a href=\"/member-zone/\">Member Zone</a>.</p>"
           }
         }
       ]
@@ -506,10 +490,9 @@
           }
         },
         {
-          "type": "placeholder",
+          "type": "richtext",
           "props": {
-            "title": "Coming into StagWorks",
-            "body": "RF experiments sit under StagWorks, outside competition budgets. A write-up will appear here when the programme is confirmed."
+            "html": "<p>Radio-frequency experiments outside the competition programmes.</p>"
           }
         },
         {
@@ -534,16 +517,15 @@
           }
         },
         {
-          "type": "placeholder",
+          "type": "richtext",
           "props": {
-            "title": "Coming into StagWorks",
-            "body": "Mechanical and composite testing to de-risk competition work. Course information lives in the Member Zone."
+            "html": "<p>Mechanical and composite testing for competition builds. Related course notes for members are in the <a href=\"/member-zone/\">Member Zone</a>.</p>"
           }
         },
         {
           "type": "cta",
           "props": {
-            "label": "Member Zone courses",
+            "label": "Member Zone",
             "href": "/member-zone/"
           }
         }
@@ -562,10 +544,9 @@
           }
         },
         {
-          "type": "placeholder",
+          "type": "richtext",
           "props": {
-            "title": "Coming into StagWorks",
-            "body": "Power and protection learning boards (e-fuses, regulators, and similar). A write-up will appear here when the programme is confirmed."
+            "html": "<p>Learning boards for power and protection circuits, including e-fuses and regulators.</p>"
           }
         },
         {
@@ -717,7 +698,7 @@
           "id": "2024-2025",
           "label": "2024–2025",
           "status": "placeholder",
-          "summary": "Most recent SDC campaign. Full write-up TBD (Severin / team).",
+          "summary": "Best Innovation at the Satellite Design Competition.",
           "highlights": [],
           "awards": [
             "Best Innovation"
@@ -728,7 +709,7 @@
           "id": "2023-2024",
           "label": "2023–2024",
           "status": "placeholder",
-          "summary": "Post-Myers competition year. Narrative and results TBD.",
+          "summary": "Satellite Design Competition, 2023–2024.",
           "highlights": [],
           "awards": [],
           "intake": "sdc-2023-2024"
@@ -874,7 +855,7 @@
           "id": "2024-2025",
           "label": "2024–2025",
           "status": "placeholder",
-          "summary": "Write-up TBD — intake: NRC (−2y backlog).",
+          "summary": "National Rocketry Championship, 2024–2025.",
           "highlights": [],
           "awards": [],
           "intake": "nrc-2024-2025"
@@ -963,7 +944,7 @@
           "label": "2024–2025",
           "status": "placeholder",
           "coverImage": "/media/covers/mach-25-lab.jpg",
-          "summary": "Write-up TBD — intake: Mach (−1y backlog).",
+          "summary": "Mach-X, 2024–2025.",
           "highlights": [],
           "awards": [],
           "intake": "mach-2024-2025"
@@ -1124,7 +1105,7 @@
           "id": "2024-2025",
           "label": "2024–2025",
           "status": "placeholder",
-          "summary": "Proper year write-up TBD — intake: Launch4Change section.",
+          "summary": "Launch4Change.",
           "highlights": [],
           "awards": [],
           "intake": "l4c-2024-2025"

@@ -1,4 +1,3 @@
-/** Placeholder ethos block for About — final copy chased before deploy. */
 export function EthosSection() {
   return (
     <section
